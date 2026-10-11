@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Моё мини‑приложение</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    body { font: 18px sans-serif; padding: 24px; color: var(--tg-theme-text-color, #222); }
+    button { padding: 12px 18px; }
+  </style>
+</head>
+<body>
+  <h1>Привет!</h1>
+  <p>Это моё Telegram Mini App.</p>
+  <button id="btn">Нажми меня</button>
+  <script>
+    const tg = window.Telegram.WebApp;
+    tg.ready();
+    document.getElementById('btn').onclick = () => {
+      tg.showAlert('Работает!');
+    };
+  </script>
+</body>
+</html>
